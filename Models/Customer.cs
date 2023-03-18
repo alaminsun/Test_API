@@ -10,10 +10,13 @@ namespace Test_API.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+
+        [Required(ErrorMessage ="Please enter name")]
+        [StringLength(20,MinimumLength =4,ErrorMessage ="Must be at least 4 character long.")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please select one")]
         public string Gender { get; set; }
+        [Display(Name="Active")]
         public bool IsActive { get; set; }
     }
 }

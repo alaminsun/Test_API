@@ -72,7 +72,7 @@ namespace Test_API.Controllers
                 };
                 _context.Customers.Add(data);
                 _context.SaveChanges();
-                return Ok();
+                return Ok("Record inserted successfully");
             }
         }
 
@@ -105,7 +105,7 @@ namespace Test_API.Controllers
                     //};
                     _context.Customers.Update(data);
                     _context.SaveChanges();
-                    return Ok();
+                    return Ok("Record updated succesfully");
                 }
             }
         }
@@ -132,7 +132,7 @@ namespace Test_API.Controllers
                 return BadRequest();
 
             }
-            return Ok();
+            return Ok("Record has been successfully deleted from database");
         }
     }
 }
